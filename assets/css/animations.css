@@ -1,0 +1,193 @@
+/* ==========================================
+   PAGE TRANSITION
+========================================== */
+
+.main-content{
+
+    opacity:1;
+
+    transition:opacity .35s ease;
+
+}
+
+body.page-leaving .main-content{
+
+    opacity:0;
+
+}
+
+/* ==========================================
+   HERO FADE
+========================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.page-header{
+
+    opacity:0;
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+.page-content{
+
+    opacity:0;
+
+    animation:fadeUp .8s ease forwards;
+
+    animation-delay:.25s;
+
+}
+
+.hero-photo{
+
+    opacity:0;
+
+    animation:fadeUp .8s ease forwards;
+
+    animation-delay:.45s;
+
+}
+
+.start-link{
+
+    opacity:0;
+
+    animation:fadeUp .8s ease forwards;
+
+    animation-delay:.65s;
+
+}
+
+/* ==========================================
+   WALLPAPER
+========================================== */
+
+@keyframes wallpaperBreath{
+
+    0%{
+
+        transform:scale(1.03);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1.03);
+
+    }
+
+}
+
+.wallpaper{
+
+    animation:
+
+        wallpaperBreath 28s ease-in-out infinite;
+
+}
+
+/* =================================================================================================================================================== */
+
+/* ==========================================
+   PAGE ENTRANCE
+========================================== */
+
+@keyframes pageFadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(24px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   CONTENT ENTRANCE
+========================================== */
+
+.content-panel{
+
+    opacity:0;
+
+    animation:pageFadeUp .8s ease forwards;
+
+    animation-delay:.15s;
+
+}
+
+.sidebar{
+
+    opacity:0;
+
+    animation:pageFadeUp .8s ease forwards;
+
+}
+
+.fade-up{
+
+    opacity:0;
+
+    animation:pageFadeUp .8s ease forwards;
+
+}
+
+/* ==========================================
+   SCROLL REVEAL
+========================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.reveal.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
